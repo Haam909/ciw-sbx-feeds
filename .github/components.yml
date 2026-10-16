@@ -1,0 +1,49 @@
+# .github/components.yml - proof run: eight packages, three registries.
+components:
+  - name: dotnet-gh
+    runtime: dotnet
+    target: package
+    project: src/dotnet-gh/DotnetGh.csproj
+    dotnet-version: '10.0.x'
+
+  - name: node-gh
+    runtime: node
+    target: package
+    path: src/node-gh
+
+  - name: dotnet-org
+    runtime: dotnet
+    target: package
+    project: src/dotnet-org/DotnetOrg.csproj
+    dotnet-version: '10.0.x'
+    feed: https://pkgs.dev.azure.com/ci-workflow-testing/_packaging/ci-workflow-org/nuget/v3/index.json
+
+  - name: node-org
+    runtime: node
+    target: package
+    path: src/node-org
+    feed: https://pkgs.dev.azure.com/ci-workflow-testing/_packaging/ci-workflow-org/npm/registry/
+
+  - name: py-org
+    runtime: python
+    target: package
+    path: src/py-org
+
+  - name: dotnet-proj
+    runtime: dotnet
+    target: package
+    project: src/dotnet-proj/DotnetProj.csproj
+    dotnet-version: '10.0.x'
+    feed: https://pkgs.dev.azure.com/ci-workflow-testing/ci-workflow-test/_packaging/ci-workflow-feed/nuget/v3/index.json
+
+  - name: node-proj
+    runtime: node
+    target: package
+    path: src/node-proj
+    feed: https://pkgs.dev.azure.com/ci-workflow-testing/ci-workflow-test/_packaging/ci-workflow-feed/npm/registry/
+
+  - name: py-proj
+    runtime: python
+    target: package
+    path: src/py-proj
+    feed: https://pkgs.dev.azure.com/ci-workflow-testing/ci-workflow-test/_packaging/ci-workflow-feed/pypi/upload/
