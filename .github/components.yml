@@ -1,4 +1,4 @@
-# .github/components.yml - proof run: eight packages, three registries.
+# .github/components.yml - proof run: nine packages, three registries.
 components:
   - name: dotnet-gh
     runtime: dotnet
@@ -48,3 +48,9 @@ components:
     target: package
     path: src/py-proj
     feed: https://pkgs.dev.azure.com/ci-workflow-testing/ci-workflow-test/_packaging/ci-workflow-feed/pypi/upload/
+
+  - name: ts-org
+    runtime: node
+    target: package
+    path: src/ts-org
+    feed: https://pkgs.dev.azure.com/ci-workflow-testing/_packaging/ci-workflow-org/npm/registry/
