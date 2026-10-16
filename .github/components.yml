@@ -28,6 +28,7 @@ components:
     runtime: python
     target: package
     path: src/py-org
+    feed: https://pkgs.dev.azure.com/ci-workflow-testing/_packaging/ci-workflow-org/pypi/upload/
 
   - name: dotnet-proj
     runtime: dotnet
